@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		.w-login {
+			width: 300px;
+			margin: 0 auto;
+			padding: 20px;
+			border: 1px solid black
+		}
+
+		label {
+			display: block;
+			margin: 10px;
+		}
+
+		label span {
+			width: 80px;
+			display: inline-block;
+		}
+
+		label button {
+			display: block;
+			margin: 0 auto;
+		}
+
+	</style>
+
+	<body>
+		<!--<div id="divPlugin" class="plugin"></div>-->
+		<div class="video_middle" id="divPlugin"></div>
+		<script src="webVideoCtrl.js"></script>
+		<script src="jquery-1.7.1.min.js"></script>
+        <script src="index.js"></script>
+		<script>
+            ev.init({
+                width:1000,
+                height:1000,
+                id:"divPlugin",
+                num:2,
+                lists:[  //传入分屏数量，如何2代表2*2，第二个参数为设备信息数组，分别为ip,端口,用户名，，密码
+                    {ip:"192.168.0.100",port:"80",uname:"admin",upass:"lmy2w2j2c2"},
+                    {ip:"192.168.0.101",port:"80",uname:"admin",upass:"mms3d123"},
+                ]
+            })
+		</script>
+	</body>
+
+</html>
